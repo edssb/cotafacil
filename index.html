@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CotaFácil</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.css"
+     integrity="sha256-P+hWJNlpL+GBSRYC7cdsDbQH91URmpDeOzLp7DbFRtE="
+     crossorigin=""/>
+      <script type="importmap">
+        {
+            "imports": {
+            "leaflet": "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.js"
+            },
+            "integrity": {
+            "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.js": "sha256-gj5JhNAaMi6LCs+jVFOk8sXDe1sWSS2Zlc87m+trLiQ="
+            }
+        }
+ </script>
+    <script src="js/index.js" type="module"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="image/logo.png" alt="Logo CotaFácil" style="width: 250px; height: 80px;">
+        </div>
+        <div id="input-origem">
+            <input id="origem" type="text" placeholder="Insira aqui o endereço de origem." size="35">
+        </div>
+        <div>
+            <img src="image/seta.png" alt="" style="width: 50px; height: 50px; margin-top: 20px">
+        </div>
+        <div id="input-destino">
+            <input id="destino" type="text" placeholder="Insira aqui o endereço de destino." size="35">
+        </div>
+        <div style="margin-top: 30px; margin-left: 10px;">
+            <input type="button" value="Roteirizar" id="btn-rota">
+        </div>
+        <div id="input-raio" style="margin-left: 30px;">
+            <label for="input-raio">Raio:</label>
+            <input type="number" id="raio" size="2" value="40" min="5" max="100" step="5">
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="map"></div>
+        <div id="list-bases">
+            <div id="header-bases">
+                <p id="km-totais">
+                    KMs totais dessa rota:
+                    <input type="number" name="kms" id="kms-totais" size="10">
+                    <label for="kms">KMs</label>
+                </p>
+            </div>
+            <div id="besteirol">
+                <p>
+                    #######TODO#########<br>
+                    - lista de prestadores aqui (!!!!!!!)<br>
+                    - sugestão de endereços parecida com o fasys<br>
+                    - encontrar alguma forma de localizar o nome dos endereços pelas coordenadas e plus code do google<br>
+                    (desculpa osm você não presta pra isso)<br>
+                    - alterar tipo de serviço<br>
+                    - descobrir forma fácil de ordenar por prestadores no destino<br>
+                    (possivelmente não existe)<br>
+                    - marcar prestadores dinamicamente no mapa seguindo o raio<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

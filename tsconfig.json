@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "es6",
+        "target": "ES6",
+        "outDir": "js",
+        "rootDir": "ts",
+        "allowArbitraryExtensions": true,
+        "allowImportingTsExtensions": true,
+        "rewriteRelativeImportExtensions": true
+    }
+}
